@@ -1,7 +1,6 @@
-package palindrome_test
+package palindrome
 
 import (
-	palindrome "practice-interviews/2019-05-02"
 	"testing"
 )
 
@@ -58,7 +57,7 @@ var testCasesSentence = []struct {
 
 func TestIsPalindromeString(t *testing.T) {
 	for _, tt := range testCases {
-		actual := palindrome.IsPalindrome(tt.Word)
+		actual := IsPalindrome(tt.Word)
 		if actual != tt.Result {
 			t.Errorf("isPalindrome(%s): expected %v, actual %v", tt.Word, tt.Result, actual)
 		}
@@ -68,7 +67,7 @@ func TestIsPalindromeString(t *testing.T) {
 
 func TestIsPalindromeSentence(t *testing.T) {
 	for _, tt := range testCasesSentence {
-		actual := palindrome.IsPalindrome(tt.Sentence)
+		actual := IsPalindrome(tt.Sentence)
 		if actual != tt.Result {
 			t.Errorf("isPalindrome(%s): expected %v, actual %v", tt.Sentence, tt.Result, actual)
 		}
